@@ -6,7 +6,7 @@ A Python library for generating BIP39 mnemonics and deriving Bismuth addresses.
 
 ### For users
 ```bash
-pip install bismuth-bip39-tools
+pip install git+https://github.com/HeavensGold/bismuth-bip39-tools.git
 ```
 
 ### For development
