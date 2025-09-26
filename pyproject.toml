@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools-scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bismuth-bip39-tools"
+version = "0.1.0"
+description = "A Python library for generating BIP39 mnemonics and deriving Bismuth addresses."
+readme = "README.md"
+authors = [
+    {name = "Gemini", email = "gemini@example.com"}  # Replace with actual email
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "mnemonic>=0.4",
+    "hdwallet>=2.2.1",
+    "base58check>=1.0.2",
+    "ecdsa>=0.18.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/HeavensGold/bismuth-bip39-tools"
+Repository = "https://github.com/HeavensGold/bismuth-bip39-tools"
+"Bug Tracker" = "https://github.com/HeavensGold/bismuth-bip39-tools/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.10",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.800",
+]
+
+[tool.setuptools.packages.find]
+include = ["bismuth_bip39_tools*"]
+
+[tool.setuptools.package-data]
+bismuth_bip39_tools = ["py.typed"]
+
+[tool.black]
+line-length = 88
+target-version = ['py36']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
