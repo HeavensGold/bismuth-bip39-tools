@@ -137,7 +137,7 @@ def derive_addresses(mnemonic: str, password: str = "", start: int = 0, count: i
             coin_type=BISMUTH_COIN_TYPE,
             account=0,
             change=0,
-            address=i
+            address=num_path
         )
         # Update HD wallet with the derivation
         hdwallet.from_derivation(derivation=derivation)

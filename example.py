@@ -60,7 +60,7 @@ def main():
 
     # Derive the first 5 addresses from the mnemonic
     print("Deriving the first 5 addresses from the mnemonic...")
-    addresses = derive_addresses(mnemonic, count=5)
+    addresses = derive_addresses(mnemonic, start=2, count=1)
 
     # Print the derived addresses and keys
     for i, address_data in enumerate(addresses):
